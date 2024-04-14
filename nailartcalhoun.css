@@ -13,7 +13,7 @@ body { background-color: #f0e1f0;
 	background-image: url(goldpink.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 150%; 
+	background-size: cover;
 }
 main { background-color: #dda4c6;
 	font-family: Georgia, "Times New Roman", serif;
@@ -33,7 +33,8 @@ header { background-color: #ffffff;
 	text-align: center;
 }
 h1 { text-align: center; 
-	font-size: 45px;}
+	font-size: 45px;
+}
 nav { color: #cc93a5;
 	font-size: 20px;
 	font-family: "Comic Sans MS", cursive;
@@ -58,13 +59,19 @@ footer a { text-decoration: none;
 main a { text-decoration: none; 
 	color: #c4996e; }
 img { padding-right: 16px; }
-dl { line-height: 25px; }
+section table { background-color: #f1edf1;
+    padding: 25px; 
+    border: 1px none; 
+}
+dl { background-color: #fbf5fc;
+	line-height: 25px; 
+	padding: 20px; }
 dt { font-size: 18px; 
 	font-weight: bold; }
 .centerimg { display: block;
     margin-left: auto;
     margin-right: auto; 
-    width: 50%;
+    width: 75%;
 }
 .center { margin-left: auto; 
 	margin-right: auto;

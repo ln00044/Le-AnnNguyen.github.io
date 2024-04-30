@@ -4,7 +4,7 @@
 <title>Nail Art Calhoun: Gallery</title>
 <meta charset="utf-8">
 <link href="nailartcalhoun.css" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nail Art salon in Calhoun, GA has a gallery of different nail idea inspirations.">
 </head>
 <body>
 <header>
@@ -21,20 +21,90 @@
   </nav>
 <main>
   <h1>Gallery</h1>
-  <p class="centerimg">For more inspiration, please visit our social media:<br>
-    <a href="https://www.instagram.com/nailartcalhoun/"><img class="centerimg" src="nailartig.png" alt="instagram page for nail art" width="923" height="282"></a></p>
+
   <div id="container">
-    <figure><img src="designs/pinkflowers.jpg" alt="nail design with pink and flowers" width="375" height="500"></figure>
-    <figure><img src="designs/frog.jpg" alt="nail design with frogs" width="375" height="500"></figure>
-    <figure><img src="designs/magnetic.jpg" alt="nail design using magnetic technique" width="375" height="500"></figure>
-    <figure><img src="designs/butterflyblue.jpg" alt="nail design with butterflies" width="375" height="500"></figure>
-    <figure><img src="designs/naruto.jpg" alt="naruto themed design" width="375" height="500"></figure>
-    <figure><img src="designs/tealflower.jpg" alt="nail design with teal and flowers" width="375" height="500"></figure>
-    <figure><img src="designs/greyblack.png" alt="nail design detailed with grey and sparkles" width="375" height="500"></figure>
-    <figure><img src="designs/pinkheart.jpg" alt="nail design with hearts" width="375" height="500"></figure>
-    <figure><img src="designs/redsparkle.jpg" alt="nail design with red and sparkles" width="375" height="500"></figure>
-    <figure><img src="designs/chromenail.jpg" alt="nail design using chrome technique" width="375" height="500"></figure>
+  <section>
+  <h2>For more inspiration, please visit our social media:<br>
+  <a href="https://www.instagram.com/nailartcalhoun/"><img src="nailartig.png" alt="instagram page for nail art" width="850" height="252"></a></h2>
+  </section>
+
+  <div>
+  <div class="slideshow">
+    <div class="image-gallery">
+      <div class="image-container">
+        <img src="designs/bluesparkle.jpg" alt="nail design with glitter and blue">
+      </div>
+      <div class="image-container">
+        <img src="designs/pinkheart.jpg" alt="nail design with pink tips and hearts">
+      </div>
+      <div class="image-container">
+        <img src="designs/chromenail.jpg" alt="stiletto nail design with chrome powder">
+      </div>
+      <div class="image-container">
+        <img src="designs/frog.jpg" alt="cartoon frog nail design">
+      </div>
+      <div class="image-container">
+        <img src="designs/greyblack.png" alt="grey nails with diamonds and gold">
+      </div>
+      <div class="image-container">
+        <img src="designs/magnetic.jpg" alt="nail design with magnet technique">
+      </div>
+      <div class="image-container">
+        <img src="designs/pinkflowers.jpg" alt="3D flower nail design">
+      </div>
+      <div class="image-container">
+        <img src="designs/redsparkle.jpg" alt="red nail design with glitter">
+      </div>
+      <div class="image-container">
+        <img src="designs/butterflyblue.jpg" alt="simple blue nail design with butterflies">
+      </div>
+      <div class="image-container">
+        <img src="designs/tealflower.jpg" alt="teal gradient nail design with white flowers">
+      </div>
+      <div class="image-container">
+        <img src="designs/naruto.jpg" alt="naruto themed nail design">
+      </div>
+    </div>
+    <a class="prev-img" onclick="slides(-1)">&#10094;</a>
+    <a class="next-img" onclick="slides(1)">&#10095;</a>
   </div>
+</div>
+  
+  <script>
+    var index = 1;
+    displaySlides(index);
+ 
+    function slides(n) {
+       displaySlides(index += n);
+    }
+ 
+    function activeSlides(n) {
+      displaySlides(index = n);
+    }
+ 
+    function displaySlides(n) {
+      var i;
+      var allSlides = document.getElementsByClassName("image-container");
+      var allDots = document.getElementsByClassName("custom-dot");
+ 
+      if (n > allSlides.length) {
+        index = 1;
+      }
+      if (n < 1) {
+        index = allSlides.length;
+      }
+      for (i = 0; i < allSlides.length; i++) {
+        allSlides[i].style.display = "none";
+      }
+      for (i = 0; i < allDots.length; i++) {
+        allDots[i].className = allDots[i].className.replace(" active-dot", "");
+      }
+       allSlides[index - 1].style.display = "block";
+       allDots[index - 1].className += "active-dot";
+    }
+ </script>
+
+</div>
 </main>
 <footer>
 <hr>
